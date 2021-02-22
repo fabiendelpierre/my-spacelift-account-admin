@@ -4,7 +4,7 @@ resource "spacelift_stack" "azure_subscription" {
 
   repository   = "my-azure-msdn-subscription-spacelift"
   branch       = "main"
-  project_root = "azure"
+  project_root = "/azure"
 
   autodeploy = true
   labels     = ["managed", "depends-on:${data.spacelift_current_stack.this.id}"]
